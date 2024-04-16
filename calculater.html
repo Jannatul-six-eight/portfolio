@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                         <meta charset="UTF-8">
+                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                         <title>Document</title>
+                         <style>
+                          .parent{
+                            display: flex;
+                          }
+                            .left{
+
+                            background-color: black; 
+                            color: black; 
+                            width: 35%; 
+                            height: 600px;  
+                            text-align: center; 
+                            margin-left: 5%;
+                                            
+
+                            }   
+                            .white{
+                            background-color: rgb(58, 65, 199);
+                            color: black;
+                            height: 100px;
+                            width: 94%;                                                                                                                                                                                                                                                                                                                                    
+                            text-align: center;
+                            margin-left: 3%;
+                            margin-top: 10%;
+                            
+                            }  
+                            #off{
+                              width: 23%; 
+                              height: 75px;
+                              background-color: rgb(233, 122, 198); 
+                              font-size: 30px;
+                              
+
+                                                  
+
+                            }
+                            #on{
+                              width: 23%; 
+                              height: 75px;
+                              background-color: rgb(233, 122, 198);
+                              font-size: 30px;
+
+                            }
+                            #equal{
+                              width: 23%; 
+                              height: 75px;
+                              background-color: rgb(233, 122, 198);
+                              font-size: 30px;
+                            }
+                            #clear{
+                              width: 23%; 
+                              height: 75px;
+                              background-color: rgb(233, 122, 198);
+                              font-size: 30px;
+                            }
+
+ 
+                            .plus{
+                                width: 23%; 
+                                height: 75px; 
+                                font-size: 30px;                
+                            }   
+                            #input{
+                            display: block;
+                            height: 80px;       
+                            width: 94%;
+                            text-align: center;
+                            margin-left: 2%;
+                            font-size: 30px;
+                            }
+                            #n2{
+                              display: block;
+                            height: 40px;
+                            width: 94%;
+                            text-align: center;
+                            margin-left: 2%;
+
+
+                            }
+                            .off{
+                              display: flex;
+                              margin-left: 3%;
+
+                            }
+                            button:hover{
+                              background-color: aquamarine;
+                              color: red;
+                            }
+                            .right{
+                              background-color: aqua;
+                              height: 600px;
+                              width: 50%;
+                              margin-left: 5%;
+                     
+                            }
+                            .fbackground{
+                              display: flex;
+                            }
+                            .oo{
+                              background-color: chartreuse;
+                              margin-left: 20pt;
+                              width: 50%;
+                              height: 300pt;
+
+                            }
+
+                         </style>
+</head>
+<body>
+  <div class="parent">
+
+
+<div class="left">
+
+                         
+ <div class="white">
+     <input type="text" class="input" id="input" placeholder="00" readonly>
+
+                                          
+ </div>
+
+<div>
+
+                        <button type="button" id="off" onclick="off()">off</button> 
+                        <button type="button" id="on" onclick="on()">on</button>
+                        <button type="button" id="equal" onclick="calculation('')">=</button>
+                        <button type="button" id="clear" onclick="cl()">clear</button><br>
+
+                         <button type="button" class="plus" onclick="setoparation('+')">+</button>
+                         <button type="button" class="plus" onclick="setoparation('-')">-</button> 
+                         <button type="button" class="plus" onclick="setoparation('*')">*</button>
+                         <button type="button" class="plus" onclick="setoparation('/')">/</button><br>
+                         <button type="button" class="plus" onclick="setoparation('.')">.</button>
+                         <button type="button" class="plus" onclick="setoparation('%')">%</button>
+
+
+                         <button type="button" class="plus" onclick="setinput('0')">0</button>
+                         <button type="button" class="plus" onclick="setinput('1')">1</button>
+
+
+
+                         <button type="button" class="plus" onclick="setinput('2')">2</button>
+                         <button type="button" class="plus" onclick="setinput('3')">3</button>
+                         <button type="button" class="plus" onclick="setinput('4')">4</button>
+                         <button type="button" class="plus" onclick="setinput('5')">5</button><br>
+                         <button type="button" class="plus" onclick="setinput('6')">6</button>
+                         <button type="button" class="plus" onclick="setinput('7')">7</button>
+                         <button type="button" class="plus" onclick="setinput('8')">8</button>
+                         <button type="button" class="plus" onclick="setinput('9')">9</button>
+</div>                       
+        </div> 
+ 
+     
+
+
+
+
+
+</div>
+        <script>
+               function setinput(x){
+                         let i = document.getElementById('input');
+                         i.value += x;
+               } 
+               function setoparation(y){
+                        let i = document.getElementById('input');
+                        i.value += y;
+               }
+               function cl(){
+                         let x ='';
+                         document.getElementById('input').value = x;
+               }  
+               function calculation(){
+                         let i = document.getElementById('input');
+                         let r = eval(i.value);
+                         document.getElementById('input').value = r;
+               }  
+
+               function off(){
+                document.getElementById('input').style.backgroundColor = 'gray';
+               }
+               function on(){
+                document.getElementById('input').style.backgroundColor = 'white';
+               }
+                                
+
+
+
+
+
+               
+        </script>
+
+ 
+</body>
+</html>
